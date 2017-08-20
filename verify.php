@@ -8,7 +8,10 @@ $url = 'https://api.line.me/v2/oauth/verify';
 //$url = 'https://www.passinwallet.com';
 
 $headers = array('Content-Type: application/x-www-form-urlencoded');
-$post = "access_token=".$access_token;
+$data = [
+    'access_token' => $access_token
+];
+$post = json_encode($data);
 
 $ch = curl_init($url);
 curl_setopt($ch, CURLOPT_PROXY, $proxy);
