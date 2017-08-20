@@ -9,7 +9,8 @@ $url = 'https://api.line.me/v2/oauth/verify';
 
 $headers = array('Content-Type: application/x-www-form-urlencoded');
 
-$post = array('access_token' => $access_token);
+$data = array('access_token' => $access_token);
+$post = json_encode($data);
 
 $ch = curl_init($url);
 curl_setopt($ch, CURLOPT_PROXY, $proxy);
