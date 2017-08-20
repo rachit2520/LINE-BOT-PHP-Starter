@@ -7,12 +7,15 @@ $url = 'https://api.line.me/v2/oauth/verify';
 
 //$url = 'https://www.passinwallet.com';
 
-$headers = array('Authorization: Bearer ' . $access_token);
+$headers = array('Content-Type: application/x-www-form-urlencoded');
+$post = "access_token=".$access_token;
 
 $ch = curl_init($url);
 curl_setopt($ch, CURLOPT_PROXY, $proxy);
 curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);
+curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
 curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 $result = curl_exec($ch);
