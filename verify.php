@@ -10,7 +10,7 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 $proxy = "http://fixie:cE0Sp7eA5dM9Jgi@velodrome.usefixie.com:80";
-$proxyauth = 'rachit_preeyong@hotmail.com:hardman1977';
+$proxyauth = 'fixie:cE0Sp7eA5dM9Jgi';
 curl_setopt($ch, CURLOPT_PROXY, $proxy);
 curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);Ï
 $result = curl_exec($ch);
