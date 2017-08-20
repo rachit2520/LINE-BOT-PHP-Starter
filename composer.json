@@ -1,4 +1,6 @@
 {
+    "name": "",
+    "description": "",
     "require": {
         "linecorp/line-bot-sdk": "^2.2"
     }
