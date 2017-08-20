@@ -38,7 +38,7 @@ if (!is_null($events['events'])) {
 			curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 
-            $proxy = "http://fixie:cE0Sp7eA5dM9Jgi@velodrome.usefixie.com:80";
+            $proxy = "velodrome.usefixie.com:80";
             $proxyauth = 'fixie:cE0Sp7eA5dM9Jgi';
             curl_setopt($ch, CURLOPT_PROXY, $proxy);
             curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);
